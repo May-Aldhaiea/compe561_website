@@ -1,12 +1,12 @@
 from flask import Flask
 
-app = Flask(__name__)
+def create_app():
+    app = Flask(__name__)
+    app.config['SECRET_KEY'] = "fill this"
+    from .views import views
+    from .auth import auth
+    app.register_blueprint(views, url_prefix='/')
+    app.register_blueprint(auth, url_prefix='/')
 
+    return app
 
-@app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
-
-
-if __name__ == '__main__':
-    app.run()
