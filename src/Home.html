@@ -21,7 +21,7 @@ body {
 
 /* Style the header */
 header {
-  background-color: #FF8D3A;
+  background-color: #ffa03a;
   padding: 30px;
   text-align: left;
   font-size: 35px;
@@ -33,7 +33,7 @@ nav {
   float: left;
   width: 30%;
   height: auto;
-  background: #FFEA3A;
+  background: #d28f49;
   padding: 20px;
 }
 
@@ -47,7 +47,7 @@ article {
   float: left;
   padding: 20px;
   width: 70%;
-  background-color: #f1f1f1;
+  background-color: #f8ec6a;
 }
 
 /* Clear floats after the columns */
@@ -59,7 +59,7 @@ section::after {
 
 /* Style the footer */
 footer {
-  background-color: #777;
+  background-color: #ffa03a;
   padding: 10px;
   text-align: center;
   color: white;
@@ -89,7 +89,7 @@ footer {
            <li><a href="aboutUs.html">About Us</a><li>
      </ul>
 
-     <!-- add news collumm -->
+     <!-- add news column -->
 
 
   </nav>
@@ -137,28 +137,44 @@ footer {
 
     <!-- product with option for quantity and add to cart button -->
 
-    <h1>Stick</h1>
-    <p>$4.99</p>
-    <p>Add to cart</p>
+    <h1>Dark Orb</h1>
+          <img src="images\dark-orb.jpg" alt="Dark Orb">
+    <p>Price: $4.99</p>
+      <label>
+          <input type="number" name="quantity" min="1">
+          <input type="submit" name="add2Cart"value="Add to Cart">
+      </label>
 
-    <h1>Rock</h1>
-    <p>$7.99</p>
-    <p>Add to cart</p>
+    <h1>Galactic Tea Set</h1>
+          <img src="images\galaxy-tea-set.jpg" alt="Galactic Tea Set">
+    <p>Price: $7.99</p>
+      <label>
+          <input type="number" name="quantity" min="1">
+          <input type="submit" name="add2Cart"value="Add to Cart">
+      </label>
 
-    <h1>pencil</h1>
-    <p>$9.99</p>
-    <p>Add to cart</p>
+    <h1>Magic Lamp</h1>
+          <img src="images\magicLamp.jpg" alt="Magic Lamp">
+    <p>Price: Being the Diamond in the Rough</p>
+      <label>
+          <input type="number" name="quantity" min="1">
+          <input type="submit" name="add2Cart"value="Add to Cart">
+      </label>
 
     <h1>CompE 561 Exam Solution</h1>
-    <p>$ YOUR SOUL</p>
-    <p>Add to cart</p>
+          <img src="images\dark-orb.jpg" alt="Dark Orb">
+    <p>Price: $ YOUR SOUL</p>
+      <label>
+          <input type="number" name="quantity" min="1">
+          <input type="submit" name="add2Cart"value="Add to Cart">
+      </label>
 
   </article>
 </section>
 
 <footer>
   <p>Footer</p>
-  <p>You cant steal our stuff</p>
+  <p>Thieves caught will be punished by coding the backend of this site</p>
 </footer>
 
 </body>
