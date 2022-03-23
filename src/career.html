@@ -67,7 +67,7 @@ footer {
     width: 100%;
     height: auto;
   }
-    .tab button {
+    .tabbutton {
   background-color: inherit;
   float: left;
   border: none;
@@ -79,23 +79,54 @@ footer {
 }
 
 /* Change background color of buttons on hover */
-.tab button:hover {
+.tabbutton:hover {
   background-color: #ddd;
 }
 
 /* Create an active/current tablink class */
-.tab button.active {
+.tabbutton {
   background-color: #ccc;
 }
 
 /* Style the tab content */
-.tab content {
+.tabcontent {
   display: none;
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
 }
 }
+
+/* career tabs */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#Magic {background-color:#3d70b2;}
+#Witch {background-color:#3d70b2;}
+#Inventory {background-color:#3d70b2;}
+#Software {background-color:#3d70b2;}
+
 </style>
 </head>
 <body>
@@ -123,16 +154,52 @@ footer {
     <p style="text-align:center;">At The Blacksmith's Anvil, you will work with the world's most talented and dedicated workers. With 30+ stores all over Europe, speaking more than 35 languages, and knowing over 130 spells, you can be a part of an incredible team.</p>
     <h2 style="text-align:center;">Benefits and Perks</h2>
     <p style="text-align:center;">Have a benefit package that may include health and dental care, dark orbs, and spell book!</p>
-    <p> </p>
-    <h3>Magic Lamp Designer</h3>
-    <p> </p>
-    <p> </p>
-    <h3>Witch</h3>
-    <p> </p>
-    <p> </p>
-    <h3>Software Designer</h3>
-    <p> </p>
-    <p> </p>
+
+    <p>Click on the Buttons below to open the Job Description menu:</p>
+
+    <div id="Magic Lamp Designer" class="tabcontent">
+      <h1>Magic Lamp Designer</h1>
+      <p>Magic Lamp Designer makes the signature lamps out of scratch. No magic skills necessary.</p>
+    </div>
+
+    <div id="Witch" class="tabcontent">
+      <h1>Witch</h1>
+      <p>Witch position is an experienced level job. Witch must be able to know up to 100 spells and must be willing to learn more.</p>
+    </div>
+
+    <div id="Inventory Manager" class="tabcontent">
+      <h1>Inventory Manager</h1>
+      <p>Inventory Manager is an experienced level job. This position helps to organize the inventory of the stores. Must be willing to relocate to the factory if necessary.</p>
+    </div>
+
+    <div id="Software Designer" class="tabcontent">
+      <h1>Software Designer</h1>
+      <p>Software Designer is a remote/mid level position that will design The Blacksmith's Anvil website. Please. This website is trash.</p>
+    </div>
+
+    <button class="tablink" onclick="openItem('Magic Lamp Designer', this, '#3d70b2')" id="defaultOpen">Magic Lamp Designer</button>
+    <button class="tablink" onclick="openItem('Witch', this, '#3d70b2')">Witch</button>
+    <button class="tablink" onclick="openItem('Inventory Manager', this, '#3d70b2')">Inventory Manager</button>
+    <button class="tablink" onclick="openItem('Software Designer', this, '#3d70b2')">Software Designer</button>
+
+    <script>
+    function openItem(itemName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(itemName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+
+    }
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
   </article>
 </section>
 
