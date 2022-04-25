@@ -11,6 +11,34 @@
 <body>
 <header>
   <h2>Categories</h2>
+
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
 </header>
 
 <section>
@@ -21,7 +49,7 @@
             <button><a href="giftCard.html">Gift Cards</a></button>
             <button><a href="career.html">Career</a></button>
             <button><a href="aboutUs.html">About Us</a></button>
-            <button><a href="cart.html">Cart</a></button>
+            <button><a href="cart.html">Sign up</a></button>
         </div>
 
      <!-- add news column -->
@@ -29,6 +57,37 @@
   </nav>
 
   <article>
+
+
+<h2>Search for Product</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="http://localhost:63342/compe561_website/Home.html#Dark-Orb">Dark Orb</a></li>
+  <li><a href="http://localhost:63342/compe561_website/Home.html#Galaxy-Tea-Set">Galaxy Tea Set</a></li>
+  <li><a href="http://localhost:63342/compe561_website/Home.html#glaives">Glaives</a></li>
+  <li><a href="http://localhost:63342/compe561_website/Home.html#Magic-Lamp">Magic Lamp</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
 
       <!-- insert stuff -->
 
