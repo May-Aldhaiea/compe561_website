@@ -8,97 +8,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+
 <style>
-* {
-  box-sizing: border-box;
-}
+ img{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #3d70b2;
-  padding: 30px;
-  text-align: left;
-  font-size: 35px;
-  color: white;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
-  float: left;
-  width: 100%;
-  height: auto;
-  background: #41d6c3;
-  padding: 20px;
-}
-
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-article {
-  float: left;
-  padding: 20px;
-  width: 100%;
-  background-color: #5596e6;
-    color:white;
-}
-
-
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: #3d70b2;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
-    .tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tab content {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-}
 </style>
 </head>
 <body>
@@ -173,7 +91,7 @@ footer {
       <h2>Least selling item</h2>
       <a id="Dark-Orb"><h3>Dark Orb</h3></a>
       <!--Image-->
-          <img src="images\dark-orb.jpg" alt="Dark Orb" width="396" height="256">
+          <img src="images\dark-orb.jpg" alt="Dark Orb" width="396" height="256" align ="left">
       <!--Price-->
       <div class="price">$ YOUR SOUL</div>
       <!--Quantity-->
