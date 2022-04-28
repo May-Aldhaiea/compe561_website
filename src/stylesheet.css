@@ -8,20 +8,53 @@ body {
 
 /* Style the header */
 header {
-  background-color: #3d70b2;
+  background-color: white;
   padding: 30px;
   text-align: left;
   font-size: 35px;
-  color: white;
+  color: #2596be;
+
 }
+
+.nav-item { margin-right: 30px; }
+.nav-item:last-child { margin-right: 0; }
+
+.nav-link {
+    color: #666666;
+    border-bottom: 4px solid transparent;
+    font-size: 1.2rem;
+}
+
+
+.nav-link-1.active,
+.nav-link-1:hover {
+    border-color: #33CCFF;
+}
+
+.nav-link-2.active,
+.nav-link-2:hover {
+    border-color: #FF6666;
+}
+
+.nav-link-3.active,
+.nav-link-3:hover {
+    border-color: #33CC66;
+}
+
+.nav-link-4.active,
+.nav-link-4:hover {
+    border-color: #CC66CC;
+}
+
+
 
 /* Create two columns/boxes that floats next to each other */
 nav {
   float: auto;
   width: auto;
   height: auto;
-  background: #41d6c3;
-  padding: 20px;
+  background: url("/images/swan.png");
+  padding: 175px;
 }
 
 /* Style the list inside the menu */
@@ -33,8 +66,8 @@ nav ul {
 article {
   padding: 20px;
   width: auto;
-  background-color: #5596e6;
-    color:white;
+  background-color: white;
+  color: #2596be;
 }
 
 /* Clear floats after the columns */
@@ -46,7 +79,7 @@ section::after {
 
 /* Style the footer */
 footer {
-  background-color: #3d70b2;
+  background-color: #2596be;
   padding: 10px;
   text-align: center;
   color: white;
