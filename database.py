@@ -48,5 +48,7 @@ def get_login() -> list:
 # print(orderHistory[-1])
 # print(items[1]['price'])
 
+#for item in items:
+#    print(item["name"])
 
-
+#print (items[0]["price"])
