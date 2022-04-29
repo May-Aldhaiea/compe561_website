@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+<header>
+  <h2>Gift Cards</h2>
+    <div id="navbar">
+        <a href="Home.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a class="active" href="giftCard.html">Gift Cards</a>
+        <a href="career.html">Career</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="cart.html">Cart</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="signin.html">Sign In</a>
+    </div>
+</header>
+
+<section>
+  <nav>
+
+     <!-- add news column -->
+
+  </nav>
+
+  <article>
+
+      <script>
+
+        window.onscroll = function() {myStickyFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myStickyFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+      </script>
+
+    <!-- product with option for quantity and add to cart button -->
+    <h1>$4.99 Gift Card</h1>
+      <!--Image-->
+          <img src="images\gift-card.png" alt="$4.99 Gift Card" width="356" height="256">
+      <!--Quantity-->
+      <div class="quantity">
+          <span>quantity : </span>
+          <label>
+              <input type="number" name="quantity" min="1">
+              <input type="submit" name="add2Cart"value="Add to Cart">
+          </label>
+      </div>
+
+    <h1>-$9.99 Gift Card</h1>
+      <!--Image-->
+          <img src="images\gift-card-background.jpg" alt="$4.99 Gift Card" width="356" height="256">
+      <!--Quantity-->
+      <div class="quantity">
+          <span>quantity : </span>
+          <label>
+              <input type="number" name="quantity" min="1">
+              <input type="submit" name="add2Cart"value="Add to Cart">
+          </label>
+      </div>
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+  <p>Thieves caught will be punished by coding the backend of this site</p>
+</footer>
+
+</body>
+</html>

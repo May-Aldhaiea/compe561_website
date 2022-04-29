@@ -1,0 +1,37 @@
+[
+	{
+		"name" : "dark orb",
+		"quantity" : 1,
+		"item ID" : "nope4",
+		"catagory" : "unknown",
+		"price" : 0
+	},
+	{
+		"name" : "glaives",
+		"quantity" : 50,
+		"item ID" : "gl473",
+		"catagory" : "props",
+		"price" : 225
+	},
+	{
+		"name" : "magic-lamps",
+		"quantity" : 56,
+		"item ID" : "m4g15",
+		"catagory" : "props",
+		"price" : 75
+	},
+	{
+		"name" : "galaxy-tea-pot",
+		"quantity" : 100,
+		"item ID" : "gteap",
+		"catagory" : "kitchenware",
+		"price" : 115
+	},
+	{
+		"name" : "Wcontroller",
+		"quantity" : 150,
+		"item ID" : "g4m3r",
+		"catagory" : "gaming",
+		"price" : 120
+	}
+]

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+<header>
+  <h2>Categories</h2>
+
+    <style>
+* {
+  box-sizing: border-box;
+}
+
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+    <div id="navbar">
+        <a href="Home.html">Home</a>
+        <a class="active" href="categories.html">Categories</a>
+        <a href="giftCard.html">Gift Cards</a>
+        <a href="career.html">Career</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="cart.html">Cart</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="signin.html">Sign In</a>
+    </div>
+</header>
+
+  <nav>
+
+     <!-- add news column -->
+
+
+  </nav>
+
+  <article>
+
+
+<h2>Search for Product</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="http://localhost:63342/compe561_website/categories.html#Dark-Orb">Dark Orb</a></li>
+  <li><a href="http://localhost:63342/compe561_website/categories.html#Galaxy-Tea-Set">Galaxy Tea Set</a></li>
+  <li><a href="http://localhost:63342/compe561_website/categories.html#Wooden-Controller">Gaming</a></li>
+  <li><a href="http://localhost:63342/compe561_website/categories.html#glaives">Glaives</a></li>
+  <li><a href="http://localhost:63342/compe561_website/categories.html#Galaxy-Tea-Set">Kitchen Ware</a></li>
+  <li><a href="http://localhost:63342/compe561_website/categories.html#Magic-Lamp">Magic Lamp</a></li>
+  <li><a href="http://localhost:63342/compe561_website/categories.html#Magic-Lamp">Prop Magic</a></li>
+  <li><a href="http://localhost:63342/compe561_website/categories.html#glaives">Prop Weapon</a></li>
+  <li><a href="http://localhost:63342/compe561_website/categories.html#Wooden-Controller">Wooden Controller</a></li>
+</ul>
+
+<script>
+
+
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+window.onscroll = function() {myStickyFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myStickyFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+<h2> Products</h2>
+      <!-- insert stuff -->
+
+          <!-- product with option for quantity and add to cart button -->
+    <!--<h1>Dark Orb</h1>-->
+      <!--linking Dark Orb with an id Dark Orb to be search able in the search engine in the categories page-->
+      <a id="Dark-Orb"><h1>Dark Orb</h1></a>
+      <!--Image-->
+          <img src="images\dark-orb.jpg" alt="Dark Orb" width="396" height="256">
+      <!--Price-->
+      <div class="price">$ YOUR SOUL</div>
+      <!--Quantity-->
+      <div class="quantity">
+          <span>quantity : </span>
+          <label>
+              <input type="number" name="quantity" min="1">
+              <input type="submit" name="add2Cart"value="Add to Cart">
+          </label>
+      </div>
+      <!--
+    <p>Price: $4.99</p>
+      <label>
+          <input type="number" name="quantity" min="1">
+          <input type="submit" name="add2Cart"value="Add to Cart">
+      </label>-->
+
+
+
+     <a id="Galaxy-Tea-Set"><h1>Galaxy Tea Set</h1></a>
+      <!--Image-->
+          <img src="images\galaxy-tea-set.jpg" alt="Galaxy-Tea-Set" width="396" height="256">
+      <!--Price-->
+      <div class="price">$ YOUR SOUL</div>
+      <!--Quantity-->
+      <div class="quantity">
+          <span>quantity : </span>
+          <label>
+              <input type="number" name="quantity" min="1">
+              <input type="submit" name="add2Cart"value="Add to Cart">
+          </label>
+      </div>
+
+     <a id="glaives"><h1>Glaives</h1></a>
+      <!--Image-->
+          <img src="images\glaives.jpg" alt="glaives" width="396" height="256">
+      <!--Price-->
+      <div class="price">$ YOUR SOUL</div>
+      <!--Quantity-->
+      <div class="quantity">
+          <span>quantity : </span>
+          <label>
+              <input type="number" name="quantity" min="1">
+              <input type="submit" name="add2Cart"value="Add to Cart">
+          </label>
+      </div>
+
+      <a id="Magic-Lamp"><h1>Magic Lamp</h1></a>
+      <!--Image-->
+          <img src="images\magicLamp.jpg" alt="Magic-Lamp" width="396" height="256">
+      <!--Price-->
+      <div class="price">$ YOUR SOUL</div>
+      <!--Quantity-->
+      <div class="quantity">
+          <span>quantity : </span>
+          <label>
+              <input type="number" name="quantity" min="1">
+              <input type="submit" name="add2Cart"value="Add to Cart">
+          </label>
+      </div>
+
+         <a id="Wooden-Controller"><h1>Wooden Controller</h1></a>
+      <!--Image-->
+          <img src="images\wooden-controller.jpg" alt="Wooden-Controller" width="396" height="256">
+      <!--Price-->
+      <div class="price">$ YOUR SOUL</div>
+      <!--Quantity-->
+      <div class="quantity">
+          <span>quantity : </span>
+          <label>
+              <input type="number" name="quantity" min="1">
+              <input type="submit" name="add2Cart"value="Add to Cart">
+          </label>
+      </div>
+
+  </article>
+
+<footer>
+  <p>Footer</p>
+  <p>Thieves caught will be punished by coding the backend of this site</p>
+</footer>
+
+</body>
+</html>

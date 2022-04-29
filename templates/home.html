@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='glide.core.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='glide.theme.min.css') }}">
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='glide.core.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+
+<style>
+ img{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+</style>
+</head>
+<body>
+<header>
+    <script src="{{ url_for('static', filename='glide.js') }}"></script>
+    <script src="{{ url_for('static', filename='test.js') }}"></script>
+
+  <h2>The Blacksmith's Anvil</h2>
+
+    <div id="navbar">
+        <a class="active" href="Home.html">Home</a>
+        <a href="categories.html">Categories</a>
+        <a href="giftCard.html">Gift Cards</a>
+        <a href="career.html">Career</a>
+        <a href="aboutUs.html">About Us</a>
+        <a href="cart.html">Cart</a>
+        <a href="signup.html">Sign Up</a>
+        <a href="signin.html">Sign In</a>
+    </div>
+</header>
+
+<section>
+  <nav>
+
+
+     <!-- add news column -->
+
+
+  </nav>
+
+  <article>
+
+      <script>
+
+        window.onscroll = function() {myStickyFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myStickyFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+      </script>
+
+    <!-- use glide to present product of the day or recommended product -->
+  <div class="glide"> <!-- using the glide.js library from https://glidejs.com/ -->
+  <div class="glide__track" data-glide-el="track">
+    <ul class="glide__slides">
+      <li class="glide__slide"><img src="{{ url_for('static', filename='My project.jpg') }}" width="1000" height="600"></li>
+      <li class="glide__slide"><img src="{{ url_for('static', filename='My project (1).jpg') }}" width="1000" height="600"></li>
+      <li class="glide__slide"><img src="{{ url_for('static', filename='My project (2).jpg') }}" width="1000" height="600"></li>
+      <li class="glide__slide"><img src="{{ url_for('static', filename='My project (3).jpg') }}" width="1000" height="600"></li>
+      <li class="glide__slide"><img src="{{ url_for('static', filename='Grey Swirl Hypnotise Zoom Background 16_9.jpg') }}" width="1000" height="600"></li>
+    </ul>
+      <div class="glide__arrows" data-glide-el="controls">
+    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+  </div>
+       <div class="glide__bullets" data-glide-el="controls[nav]">
+    <button class="glide__bullet" data-glide-dir="=0"></button>
+    <button class="glide__bullet" data-glide-dir="=1"></button>
+    <button class="glide__bullet" data-glide-dir="=2"></button>
+    <button class="glide__bullet" data-glide-dir="=3"></button>
+    <button class="glide__bullet" data-glide-dir="=4"></button>
+  </div>
+  </div>
+</div>
+
+      <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+      <script src="{{ url_for('static', filename='test.js') }}"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+      <script>
+  new Glide('.glide').mount()
+</script>
+
+    <!-- Coupons -->
+    <div class="static">
+        <h1>Coupon</h1>
+        <p>Buy 2 get 2</p>
+        <p>50% more. pay us an extra 50% :)</p>
+    </div>
+
+    <!-- product with option for quantity and add to cart button -->
+    <!--<h1>Dark Orb</h1>-->
+      <!--linking Dark Orb with an id Dark Orb to be search able in the search engine in the categories page-->
+
+      <h2>Least selling item</h2>
+      <a id="Dark-Orb"><h3>Dark Orb</h3></a>
+      <!--Image-->
+          <img src="{{ url_for('static', filename='dark-orb.jpg') }}" alt="Dark Orb" width="396" height="256" align ="left">
+      <!--Price-->
+      <div class="price">$ YOUR SOUL</div>
+      <!--Quantity-->
+      <div class="quantity">
+          <span>quantity : </span>
+          <label>
+              <input type="number" name="quantity" min="1">
+              <input type="submit" name="add2Cart"value="Add to Cart">
+          </label>
+      </div>
+      <!--
+    <p>Price: $4.99</p>
+      <label>
+          <input type="number" name="quantity" min="1">
+          <input type="submit" name="add2Cart"value="Add to Cart">
+      </label>-->
+
+  </article>
+</section>
+
+<footer>
+  <p>Footer</p>
+  <p>Thieves caught will be punished by coding the backend of this site</p>
+</footer>
+
+</body>
+</html>
