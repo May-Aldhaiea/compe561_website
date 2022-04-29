@@ -5,14 +5,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
 <link rel="stylesheet" href="stylesheet.css">
 
 </head>
 <body>
 <header>
-  <h2>Career</h2>
+<h2>Career</h2>
 
 </header>
 
@@ -34,27 +32,11 @@
 
   <article>
 
-      <script>
-
-        window.onscroll = function() {myStickyFunction()};
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myStickyFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
-      </script>
-
     <h2 style="text-align:center;">Join Our Team!</h2>
     <p style="text-align:center;">At The Blacksmith's Anvil, you will work with the world's most talented and dedicated workers. With 30+ stores all over Europe, speaking more than 35 languages, and knowing over 130 spells, you can be a part of an incredible team.</p>
     <h2 style="text-align:center;">Benefits and Perks</h2>
     <p style="text-align:center;">Have a benefit package that may include health and dental care, dark orbs, and spell book!</p>
-    <p>Click on the Buttons below to open the Job Description menu:</p>
+    <h3>Click on the Buttons below to open the Job Description menu:</h3>
 
     <div id="Magic_Lamp_Designer" class="tabcontent">
       <h1>Magic Lamp Designer</h1>
@@ -82,22 +64,38 @@
     <button class="tablink" onclick="openItem('Software_Designer', this, '#FFFFFF')">Software Designer</button>
 
     <script>
-    function openItem(itemName,elmnt,color) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
-      }
-      document.getElementById(itemName).style.display = "block";
-      elmnt.style.backgroundColor = color;
+        // tab function where it clicks on the job and the description will pop up
+        function openItem(itemName,elmnt,color) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablink");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].style.backgroundColor = "";
+          }
+          document.getElementById(itemName).style.display = "block";
+          elmnt.style.backgroundColor = color;
 
-    }
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
+        }
+
+        // navigation bar sticky function
+        document.getElementById("defaultOpen").click();
+
+        window.onscroll = function() {myStickyFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myStickyFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+
     </script>
   </article>
 </section>

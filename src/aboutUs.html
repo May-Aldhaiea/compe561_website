@@ -5,14 +5,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <link rel="stylesheet" href="stylesheet.css">
 
 <style>
 .column {
   float: left;
-  width: 50%;
-  padding: 10px;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
 }
 /* Clear floats after the columns */
 .row:after {
@@ -20,13 +20,31 @@
   display: table;
   clear: both;
 }
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #4EACCCFF;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #a5cde9;
+}
 </style>
 </head>
 <body>
 <header>
   <h2>About Us</h2>
-
-
 </header>
 
 <section>
@@ -69,17 +87,47 @@
     <h2 style="text-align:center;">Our Story</h2>
     <p style="text-align:center;">This store was based off of a fantasy. This shop is the first Fantasy Medieval to open an online store. Casper Cloud and Peter Parker met in Harvard University in a Witchcraft class. They noticed each other's passion and skills on potions, spells, and magic. Once they started a small business from the ground up, they knew they had open to offer in this world. After years and years of hard work, they launched their first store in 2011, and sold over 2 million products within the first year. Since then, they opened up 30+ stores in Europe. They launched their online website in 2015.</p>
 
-    <h2 style="text-align:center;">Meet the Founders!</h2>
-    <div class="row">
-    <div class="column" style="background-color:#FFFFFF;">
-    <h3 style="text-align:center;">Co-Founder: Casper Cloud</h3>
-    <p style="text-align:center;">Casper Cloud has a Master's degree in Witchcraft with emphasis in potions. He started a small business of customized magic potions and lamps to pay for his tuition. Then his love and passion for making potions grew once he graduated and grew his business with Parker.</p>
-      </div>
-  <div class="column" style="background-color:#FFFFFF;">
-        <h3 style="text-align:center;">Co-Founder: Peter Parker</h3>
-    <p style="text-align:center;">Peter Parker has a Bachelor's degree in Medieval History with a minor in Business. He loved to learn about history and was curious about Witchcraft in college, so he takes a class with Cloud and this is how the Founder's meet. Cloud has a business brains when it came to start-ups. He saw Cloud's store and wanted to be his business partner.</p>
+   <h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="images\casper.jpg" alt="Peter1" style="width:100%">
+      <div class="container">
+        <h2>Tom Holland</h2>
+        <p class="title">CEO & Co-Founder</p>
+        <p>Peter 1 has a Master's degree in Witchcraft with emphasis in potions. He started a small business of customized magic potions and lamps to pay for his tuition. Then his love and passion for making potions grew once he graduated and grew his business with Parker.</p>
+        <p>myspider@example.com</p>
+        <p><button class="button">Contact</button></p>
       </div>
     </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="images\peter.jpg" alt="Peter2" style="width:100%">
+      <div class="container">
+        <h2>Tobey Maguire</h2>
+        <p class="title">Co-Founder</p>
+        <p>Peter 2 has a Bachelor's degree in Medieval History with a minor in Business. He loved to learn about history and was curious about Witchcraft in college, so he takes a class with Cloud and this is how the Founder's meet. Cloud has a business brains when it came to start-ups.</p>
+        <p>ogspider@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="images\kaylie.jpg" alt="Peter3" style="width:100%">
+      <div class="container">
+        <h2>Andrew Garfield</h2>
+        <p class="title">Weapon Specialist</p>
+        <p>Peter 3 is the professional in weapon art. She has a Master's Degree in archery and is now making glavies for the store. She is also the inventory person once we hire a new one.</p>
+        <p>amazingspider@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
   </article>
 </section>
 

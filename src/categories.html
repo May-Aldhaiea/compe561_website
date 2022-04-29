@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <title>CSS Template</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,13 +12,12 @@
 <body>
 <header>
   <h2>Categories</h2>
-
-    <style>
+<style>
 * {
   box-sizing: border-box;
 }
 
-
+/* UL search bar styles*/
 #myUL {
   list-style-type: none;
   padding: 0;
@@ -38,27 +38,34 @@
 #myUL li a:hover:not(.header) {
   background-color: #eee;
 }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
 </style>
 
 </header>
 
-  <nav>
+<nav>
 
 <div id="navbar">
         <a href="Home.html">Home</a>
-        <a href="categories.html">Categories</a>
+        <a class="active" href="categories.html">Categories</a>
         <a href="giftCard.html">Gift Cards</a>
         <a href="career.html">Career</a>
         <a href="aboutUs.html">About Us</a>
-        <a class="active" href="cart.html">Cart</a>
+        <a href="cart.html">Cart</a>
         <a href="signup.html">Sign Up</a>
         <a href="signin.html">Sign In</a>
     </div>
 
-  </nav>
+</nav>
 
-  <article>
-
+<article>
 
 <h2>Search for Product</h2>
 
@@ -78,7 +85,7 @@
 
 <script>
 
-
+/* filter/search function */
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
     input = document.getElementById("myInput");
@@ -96,6 +103,7 @@ function myFunction() {
     }
 }
 
+/* sticky navigation bar function */
 window.onscroll = function() {myStickyFunction()};
 
 var navbar = document.getElementById("navbar");
@@ -109,18 +117,18 @@ function myStickyFunction() {
   }
 }
 </script>
-
-<h2> Products</h2>
-      <!-- insert stuff -->
-
-          <!-- product with option for quantity and add to cart button -->
-    <!--<h1>Dark Orb</h1>-->
+<form class="row g-3">
+    <h2> Products</h2>
+</form>
+<form class="row g-3">
+    <div class="col-md-6">
+      <!-- product with option for quantity and add to cart button -->
       <!--linking Dark Orb with an id Dark Orb to be search able in the search engine in the categories page-->
-      <a id="Dark-Orb"><h1>Dark Orb</h1></a>
+      <a id="Dark-Orb"><h3>Dark Orb</h3></a>
       <!--Image-->
           <img src="images\dark-orb.jpg" alt="Dark Orb" width="396" height="256">
       <!--Price-->
-      <div class="price">$ YOUR SOUL</div>
+      <div class="price">$45.99</div>
       <!--Quantity-->
       <div class="quantity">
           <span>quantity : </span>
@@ -129,20 +137,15 @@ function myStickyFunction() {
               <input type="submit" name="add2Cart"value="Add to Cart">
           </label>
       </div>
-      <!--
-    <p>Price: $4.99</p>
-      <label>
-          <input type="number" name="quantity" min="1">
-          <input type="submit" name="add2Cart"value="Add to Cart">
-      </label>-->
+    </div>
 
-
-
-     <a id="Galaxy-Tea-Set"><h1>Galaxy Tea Set</h1></a>
+     <!--linking Galaxy Tea Set with an id Galaxy Tea Set to be search able in the search engine in the categories page-->
+    <div class="col-md-6">
+     <a id="Galaxy-Tea-Set"><h3>Galaxy Tea Set</h3></a>
       <!--Image-->
           <img src="images\galaxy-tea-set.jpg" alt="Galaxy-Tea-Set" width="396" height="256">
       <!--Price-->
-      <div class="price">$ YOUR SOUL</div>
+      <div class="price">$72.00</div>
       <!--Quantity-->
       <div class="quantity">
           <span>quantity : </span>
@@ -151,12 +154,15 @@ function myStickyFunction() {
               <input type="submit" name="add2Cart"value="Add to Cart">
           </label>
       </div>
+    </div>
 
-     <a id="glaives"><h1>Glaives</h1></a>
+     <!--linking Glaives with an id Glaives to be search able in the search engine in the categories page-->
+    <div class="col-md-6">
+     <a id="glaives"><h3>Glaives</h3></a>
       <!--Image-->
           <img src="images\glaives.jpg" alt="glaives" width="396" height="256">
       <!--Price-->
-      <div class="price">$ YOUR SOUL</div>
+      <div class="price">$149.95</div>
       <!--Quantity-->
       <div class="quantity">
           <span>quantity : </span>
@@ -165,12 +171,15 @@ function myStickyFunction() {
               <input type="submit" name="add2Cart"value="Add to Cart">
           </label>
       </div>
+    </div>
 
-      <a id="Magic-Lamp"><h1>Magic Lamp</h1></a>
+     <!--linking magic lamp with an id magic lamp to be search able in the search engine in the categories page-->
+    <div class="col-md-6">
+     <a id="Magic-Lamp"><h3>Magic Lamp</h3></a>
       <!--Image-->
           <img src="images\magicLamp.jpg" alt="Magic-Lamp" width="396" height="256">
       <!--Price-->
-      <div class="price">$ YOUR SOUL</div>
+      <div class="price">$40,000.00</div>
       <!--Quantity-->
       <div class="quantity">
           <span>quantity : </span>
@@ -179,12 +188,15 @@ function myStickyFunction() {
               <input type="submit" name="add2Cart"value="Add to Cart">
           </label>
       </div>
+    </div>
 
-         <a id="Wooden-Controller"><h1>Wooden Controller</h1></a>
+     <!--linking wooden controller with an id wooden controller to be search able in the search engine in the categories page-->
+    <div class="col-md-6">
+     <a id="Wooden-Controller"><h3>Wooden Controller</h3></a>
       <!--Image-->
           <img src="images\wooden-controller.jpg" alt="Wooden-Controller" width="396" height="256">
       <!--Price-->
-      <div class="price">$ YOUR SOUL</div>
+      <div class="price">$5</div>
       <!--Quantity-->
       <div class="quantity">
           <span>quantity : </span>
@@ -193,7 +205,8 @@ function myStickyFunction() {
               <input type="submit" name="add2Cart"value="Add to Cart">
           </label>
       </div>
-
+    </div>
+</form>
   </article>
 
 <footer>

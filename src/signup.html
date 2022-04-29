@@ -16,7 +16,6 @@
 <header>
   <h2>The Blacksmith's Anvil</h2>
 
-
 </header>
 
   <nav>     <!-- bootstrap is changing this sizing-->
@@ -35,22 +34,6 @@
   </nav>
 
   <article>
-
-      <script>
-
-        window.onscroll = function() {myStickyFunction()};
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myStickyFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
-        }
-      </script>
 
 <form class="row g-3">
   <div class="col-md-6">
@@ -74,6 +57,22 @@
     <button type="submit" class="btn btn-primary">Sign Up</button>
   </div>
 </form>
+
+      <script>
+
+        window.onscroll = function() {myStickyFunction()};
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myStickyFunction() {
+          if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+      </script>
 
   </article>
 
