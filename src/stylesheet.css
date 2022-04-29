@@ -58,8 +58,7 @@ header {
 
 
 
-
-/* Create two columns/boxes that floats next to each other */
+/*
 nav {
   float: auto;
   width: auto;
@@ -68,11 +67,10 @@ nav {
   padding: 175px;
 }
 
-/* Style the list inside the menu */
 nav ul {
   list-style-type: none;
   padding: 0;
-}
+}*/
 
 article {
   padding: 20px;
@@ -136,7 +134,7 @@ footer {
 /* career tabs */
 .tablink {
   background-color: #555;
-  color: white;
+  color: #2596be;
   float: left;
   border: none;
   outline: none;
@@ -150,18 +148,18 @@ footer {
   background-color: #777;
 }
 
-/* Style the tab content */
+/* Style the tab content for career description */
 .tabcontent {
-  color: white;
+  color: #2596be;
   display: none;
   padding: 50px;
   text-align: center;
 }
 
-#Magic_Lamp_Designer {background-color:#3d70b2;}
-#Witch {background-color:#3d70b2;}
-#Inventory_Manager {background-color:#3d70b2;}
-#Software_Designer {background-color:#3d70b2;}
+#Magic_Lamp_Designer {background-color:#FFFFFF;}
+#Witch {background-color:#FFFFFF;}
+#Inventory_Manager {background-color:#FFFFFF;}
+#Software_Designer {background-color:#FFFFFF;}
 
 
 
