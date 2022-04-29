@@ -19,35 +19,41 @@
      margin-left: auto;
      margin-right: auto;
  }
- /* tabs for home page */
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #4EACCCFF;
-}
 
-li {
+/* Left column */
+.leftcolumn {
   float: left;
+  width: 75%;
 }
 
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
 }
 
-li a:hover {
-  background-color: #a5cde9;
+/* Add a card effect for articles */
+.card {
+   background-color: #F5F5F5;
+   padding: 20px;
+   margin-top: 20px;
 }
 
-li a.active {
-  background-color: #127394;
-  color: white;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -91,15 +97,18 @@ li a.active {
         }
       </script>
 
-    <!-- use glide to present product of the day or recommended product -->
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+            <!-- use glide to present product of the day or recommended product -->
   <div class="glide"> <!-- using the glide.js library from https://glidejs.com/ -->
   <div class="glide__track" data-glide-el="track">
     <ul class="glide__slides">
-      <li class="glide__slide"><img src="images\My project.jpg" width="1000" height="600"></li>
-      <li class="glide__slide"><img src="images\My project (1).jpg" width="1000" height="600"></li>
-      <li class="glide__slide"><img src="images\My project (2).jpg" width="1000" height="600"></li>
-      <li class="glide__slide"><img src="images\My project (3).jpg" width="1000" height="600"></li>
-      <li class="glide__slide"><img src="images\Grey Swirl Hypnotise Zoom Background 16_9.jpg" width="1000" height="600"></li>
+      <li class="glide__slide"><img src="images\My project.jpg" style="width:100%"></li>
+      <li class="glide__slide"><img src="images\My project (1).jpg" style="width:100%"></li>
+      <li class="glide__slide"><img src="images\My project (2).jpg" style="width:100%"></li>
+      <li class="glide__slide"><img src="images\My project (3).jpg" style="width:100%"></li>
+      <li class="glide__slide"><img src="images\Grey Swirl Hypnotise Zoom Background 16_9.jpg" style="width:100%"></li>
     </ul>
   <div class="glide__arrows" data-glide-el="controls">
     <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
@@ -114,29 +123,16 @@ li a.active {
   </div>
   </div>
 </div>
-
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-    <script src="test.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script>
-        new Glide('.glide').mount()
-    </script>
-
-    <!-- Coupons -->
-    <div class="static">
-        <h1>Coupon</h1>
-        <p>Buy 2 get 2</p>
-        <p>50% more. pay us an extra 50% :)</p>
-    </div>
-
-<form class="row g-3">
+     </div>
+    <div class="card">
+      <h2>Least selling items</h2>
+      <form class="row g-3">
     <div class="col-md-6">
-      <h2>Least selling item</h2>
       <!-- product with option for quantity and add to cart button -->
       <!--linking Dark Orb with an id Dark Orb to be search able in the search engine in the categories page-->
       <a id="Dark-Orb"><h3>Dark Orb</h3></a>
       <!--Image-->
-          <img src="images\dark-orb.jpg" alt="Dark Orb" width="396" height="256" align ="left">
+          <img src="images\dark-orb.jpg" alt="Dark Orb" width="396" height="256">
       <!--Price-->
       <div class="price">$45.99</div>
       <!--Quantity-->
@@ -147,6 +143,61 @@ li a.active {
               <input type="submit" name="add2Cart"value="Add to Cart">
           </label>
       </div>
+    </div>
+
+     <!--linking Galaxy Tea Set with an id Galaxy Tea Set to be search able in the search engine in the categories page-->
+    <div class="col-md-6">
+     <a id="Galaxy-Tea-Set"><h3>Galaxy Tea Set</h3></a>
+      <!--Image-->
+          <img src="images\galaxy-tea-set.jpg" alt="Galaxy-Tea-Set" width="396" height="256">
+      <!--Price-->
+      <div class="price">$72.00</div>
+      <!--Quantity-->
+      <div class="quantity">
+          <span>quantity : </span>
+          <label>
+              <input type="number" name="quantity" min="1">
+              <input type="submit" name="add2Cart"value="Add to Cart">
+          </label>
+      </div>
+    </div>
+    </form>
+  </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p>BlacksmithsAnvil@example.com</p>
+      <p>But don't! We don't any feedback!</p>
+    </div>
+    <div class="card">
+      <h3>NEW PRODUCTS</h3>
+      <img src="images\magicLamp.jpg" style="width:50%"><br>
+      <img src="images\galaxy-tea-set.jpg" style="width:50%"><br>
+      <img src="images\wooden-controller.jpg" style="width:50%">
+    </div>
+    <div class="card">
+          <!-- Coupons -->
+        <h3>Coupon</h3>
+        <p>Buy 2 get 2</p>
+        <p>50% more. pay us an extra 50% :)</p>
+    </div>
+   <div class="card">
+        <img src="images\My project (3).jpg" style="width:100%">
+    </div>
+  </div>
+</div>
+
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="test.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        new Glide('.glide').mount()
+    </script>
+
+<form class="row g-3">
+    <div class="col-md-6">
+
     </div>
 </form>
 </article>
