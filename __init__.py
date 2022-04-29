@@ -7,7 +7,8 @@ itemsDB = db.get_items()
 ordersDB = db.get_order()
 loginDB = db.get_login()
 
-
+@app.route('/Home.html')
+@app.route('/Home')
 @app.route('/home.html')
 @app.route('/home')
 @app.route('/')
