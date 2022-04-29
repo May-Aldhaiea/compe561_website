@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
 
 </head>
 <body>
@@ -126,7 +126,7 @@ function myStickyFunction() {
       <!--linking Dark Orb with an id Dark Orb to be search able in the search engine in the categories page-->
       <a id="Dark-Orb"><h3>Dark Orb</h3></a>
       <!--Image-->
-          <img src="images\dark-orb.jpg" alt="Dark Orb" width="396" height="256">
+          <img src="{{ url_for('static', filename='dark-orb.jpg') }}" alt="Dark Orb" width="396" height="256">
       <!--Price-->
       <div class="price">$45.99</div>
       <!--Quantity-->
@@ -143,7 +143,7 @@ function myStickyFunction() {
     <div class="col-md-6">
      <a id="Galaxy-Tea-Set"><h3>Galaxy Tea Set</h3></a>
       <!--Image-->
-          <img src="images\galaxy-tea-set.jpg" alt="Galaxy-Tea-Set" width="396" height="256">
+          <img src="{{ url_for('static', filename='galaxy-tea-set.jpg') }}" alt="Galaxy-Tea-Set" width="396" height="256">
       <!--Price-->
       <div class="price">$72.00</div>
       <!--Quantity-->
@@ -160,7 +160,7 @@ function myStickyFunction() {
     <div class="col-md-6">
      <a id="glaives"><h3>Glaives</h3></a>
       <!--Image-->
-          <img src="images\glaives.jpg" alt="glaives" width="396" height="256">
+          <img src="{{ url_for('static', filename='glaives.jpg') }}" alt="glaives" width="396" height="256">
       <!--Price-->
       <div class="price">$149.95</div>
       <!--Quantity-->
@@ -177,7 +177,7 @@ function myStickyFunction() {
     <div class="col-md-6">
      <a id="Magic-Lamp"><h3>Magic Lamp</h3></a>
       <!--Image-->
-          <img src="images\magicLamp.jpg" alt="Magic-Lamp" width="396" height="256">
+          <img src="{{ url_for('static', filename='magicLamp.jpg') }}" alt="Magic-Lamp" width="396" height="256">
       <!--Price-->
       <div class="price">$40,000.00</div>
       <!--Quantity-->
@@ -194,7 +194,7 @@ function myStickyFunction() {
     <div class="col-md-6">
      <a id="Wooden-Controller"><h3>Wooden Controller</h3></a>
       <!--Image-->
-          <img src="images\wooden-controller.jpg" alt="Wooden-Controller" width="396" height="256">
+          <img src="{{ url_for('static', filename='wooden-controller.jpg') }}" alt="Wooden-Controller" width="396" height="256">
       <!--Price-->
       <div class="price">$5</div>
       <!--Quantity-->

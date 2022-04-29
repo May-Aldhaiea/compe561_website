@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="stylesheet.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
 
 <style>
 .column {
@@ -91,7 +91,7 @@
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="images\casper.jpg" alt="Peter1" style="width:100%">
+      <img src="{{ url_for('static', filename='casper.jpg') }}" alt="Peter1" style="width:100%">
       <div class="container">
         <h2>Tom Holland</h2>
         <p class="title">CEO & Co-Founder</p>
@@ -104,7 +104,7 @@
 
   <div class="column">
     <div class="card">
-      <img src="images\peter.jpg" alt="Peter2" style="width:100%">
+      <img src="{{ url_for('static', filename='peter.jpg') }}" alt="Peter2" style="width:100%">
       <div class="container">
         <h2>Tobey Maguire</h2>
         <p class="title">Co-Founder</p>
@@ -117,7 +117,7 @@
 
   <div class="column">
     <div class="card">
-      <img src="images\kaylie.jpg" alt="Peter3" style="width:100%">
+      <img src="{{ url_for('static', filename='kaylie.jpg') }}" alt="Peter3" style="width:100%">
       <div class="container">
         <h2>Andrew Garfield</h2>
         <p class="title">Weapon Specialist</p>

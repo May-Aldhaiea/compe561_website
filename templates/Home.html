@@ -2,16 +2,15 @@
 <html lang="en">
 <head>
 
-    <link rel="Stylesheet" href="glide.core.min.css" />
-    <link rel="Stylesheet" href="glide.theme.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='glide.core.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='glide.theme.min.css') }}">
 
     <title>CSS Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='glide.core.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
 
 <style>
  img{
@@ -58,8 +57,8 @@
 </head>
 <body>
 <header>
-    <script src="glide.js"></script>
-    <script src="test.js"></script>
+    <script src="{{ url_for('static', filename='glide.js') }}"></script>
+    <script src="{{ url_for('static', filename='test.js') }}"></script>
   <h2>The Blacksmith's Anvil</h2>
 
 </header>
@@ -104,11 +103,11 @@
   <div class="glide"> <!-- using the glide.js library from https://glidejs.com/ -->
   <div class="glide__track" data-glide-el="track">
     <ul class="glide__slides">
-      <li class="glide__slide"><img src="images\My project.jpg" style="width:100%"></li>
-      <li class="glide__slide"><img src="images\My project (1).jpg" style="width:100%"></li>
-      <li class="glide__slide"><img src="images\My project (2).jpg" style="width:100%"></li>
-      <li class="glide__slide"><img src="images\My project (3).jpg" style="width:100%"></li>
-      <li class="glide__slide"><img src="images\Grey Swirl Hypnotise Zoom Background 16_9.jpg" style="width:100%"></li>
+      <li class="glide__slide"><img src="{{ url_for('static', filename='My project.jpg') }}" width="1000" height="600"></li>
+      <li class="glide__slide"><img src="{{ url_for('static', filename='My project (1).jpg') }}" width="1000" height="600"></li>
+      <li class="glide__slide"><img src="{{ url_for('static', filename='My project (2).jpg') }}" width="1000" height="600"></li>
+      <li class="glide__slide"><img src="{{ url_for('static', filename='My project (3).jpg') }}" width="1000" height="600"></li>
+      <li class="glide__slide"><img src="{{ url_for('static', filename='Grey Swirl Hypnotise Zoom Background 16_9.jpg') }}" width="1000" height="600"></li>
     </ul>
   <div class="glide__arrows" data-glide-el="controls">
     <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
@@ -132,7 +131,7 @@
       <!--linking Dark Orb with an id Dark Orb to be search able in the search engine in the categories page-->
       <a id="Dark-Orb"><h3>Dark Orb</h3></a>
       <!--Image-->
-          <img src="images\dark-orb.jpg" alt="Dark Orb" width="396" height="256">
+          <img src="{{ url_for('static', filename='dark-orb.jpg') }}" alt="Dark Orb" width="396" height="256">
       <!--Price-->
       <div class="price">$45.99</div>
       <!--Quantity-->
@@ -149,7 +148,7 @@
     <div class="col-md-6">
      <a id="Galaxy-Tea-Set"><h3>Galaxy Tea Set</h3></a>
       <!--Image-->
-          <img src="images\galaxy-tea-set.jpg" alt="Galaxy-Tea-Set" width="396" height="256">
+          <img src="{{ url_for('static', filename='galaxy-tea-set.jpg') }}" alt="Galaxy-Tea-Set" width="396" height="256">
       <!--Price-->
       <div class="price">$72.00</div>
       <!--Quantity-->
@@ -172,9 +171,9 @@
     </div>
     <div class="card">
       <h3>NEW PRODUCTS</h3>
-      <img src="images\magicLamp.jpg" style="width:50%"><br>
-      <img src="images\galaxy-tea-set.jpg" style="width:50%"><br>
-      <img src="images\wooden-controller.jpg" style="width:50%">
+      <img src="{{ url_for('static', filename='magicLamp.jpg') }}" style="width:50%"><br>
+      <img src="{{ url_for('static', filename='galaxy-tea-set.jpg') }}" style="width:50%"><br>
+      <img src="{{ url_for('static', filename='wooden-controller.jpg') }}" style="width:50%">
     </div>
     <div class="card">
           <!-- Coupons -->
@@ -183,13 +182,13 @@
         <p>50% more. pay us an extra 50% :)</p>
     </div>
    <div class="card">
-        <img src="images\My project (3).jpg" style="width:100%">
+        <img src="{{ url_for('static', filename="My project (3).jpg") }}" style="width:100%">
     </div>
   </div>
 </div>
 
-    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
-    <script src="test.js"></script>
+    <script src="../../../node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="{{ url_for('static', filename='test.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script>
         new Glide('.glide').mount()
