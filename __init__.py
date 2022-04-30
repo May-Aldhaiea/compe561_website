@@ -13,8 +13,8 @@ loginDB = db.get_login()
 @app.route('/home')
 @app.route('/')
 def home():
-    price = itemsDB[1]['price']
-    return flask.render_template("home.html", testprice=price)
+    price = itemsDB[0]['price']
+    return flask.render_template("home.html", orbprice=price)
 
 
 @app.route('/signup')
