@@ -2,13 +2,13 @@ import mysql.connector
 
 mydb = mysql.connector.connect(
     host="localhost",
+    port="3306",
     user="root",
-    passwd="",
     database="flask"
 )
 mycursor = mydb.cursor()
 
-sql = "INSERT INTO sites (email, password) VALUES (%s, %s)"
+sql = "INSERT INTO flask (email, password) VALUES (%s, %s)"
 val = ("demo@gmail.com", "randompassword")
 mycursor.execute(sql, val)
 
