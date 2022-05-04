@@ -1,34 +1,17 @@
-from flask import Flask, render_template, request
-from flask_mysqldb import MySQL
+import mysql.connector
 
-app = Flask(__name__)
+mydb = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    passwd="",
+    database="flask"
+)
+mycursor = mydb.cursor()
 
-app.config['MYSQL_HOST'] = 'localhost'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'flask'
+sql = "INSERT INTO sites (email, password) VALUES (%s, %s)"
+val = ("flask", "http://localhost/")
+mycursor.execute(sql, val)
 
-mysql = MySQL(app)
+mydb.commit()  # The data table contents are updated and must be used to this statement
 
-
-@app.route('/form')
-def form():
-    return render_template('home.html')
-
-
-@app.route('/login', methods=['POST', 'GET'])
-def login():
-    if request.method == 'GET':
-        return "Login via the login Form"
-
-    if request.method == 'POST':
-        email = request.form['email']
-        password = request.form['password']
-        cursor = mysql.connection.cursor()
-        cursor.execute(''' INSERT INTO flask VALUES(%s,%s)''', (email, password))
-        mysql.connection.commit()
-        cursor.close()
-        return f"Done!!"
-
-
-app.run(host='localhost', port=5000)
+print(mycursor.rowcount, "Record insertion succeeded.")
