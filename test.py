@@ -28,7 +28,7 @@ app.secret_key = "super secret key"
 
 @app.route("/signup",  methods=["GET", "POST"])
 def signup():
-    connection = mysql.connector.connect(host="localhost", port="3306", user="root", database="DATABASENAME")
+    connection = mysql.connector.connect(host="localhost", port="3306", user="root", database="flask")
     cursor = connection.cursor()
     if request.method == 'POST':
         email = request.form['email']
@@ -47,7 +47,7 @@ def signup():
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    connection = mysql.connector.connect(host="localhost", port="3306", user="root", database="DATABASENAME")
+    connection = mysql.connector.connect(host="localhost", port="3306", user="root", database="flask")
     cursor = connection.cursor()
     user = [session['loggedin'], session['email']]
     if request.method=='POST':

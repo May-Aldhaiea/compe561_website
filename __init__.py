@@ -1,11 +1,7 @@
 import flask
 from flask import url_for # don't get rid of this import
-import database as db
+import MongoDB as db
 app = flask.Flask(__name__)
-
-itemsDB = db.get_items()
-ordersDB = db.get_order()
-loginDB = db.get_login()
 
 @app.route('/Home.html')
 @app.route('/Home')
@@ -13,8 +9,8 @@ loginDB = db.get_login()
 @app.route('/home')
 @app.route('/')
 def home():
-    price = itemsDB[0]['price']
-    return flask.render_template("home.html", orbprice=price)
+#    price = itemsDB[0]['price']
+    return flask.render_template("home.html")#, orbprice=price)
 
 
 @app.route('/signup')
