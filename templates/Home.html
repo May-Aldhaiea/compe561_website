@@ -1,211 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-    <link rel="stylesheet" href="{{ url_for('static', filename='glide.core.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='glide.theme.min.css') }}">
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='glide.core.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='glide.theme.min.css') }}"
+    />
 
     <title>CSS Template</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='glide.core.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheet.css') }}">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='glide.core.min.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='stylesheet.css') }}"
+    />
 
-<style>
- img{
-     display: block;
-     margin-left: auto;
-     margin-right: auto;
- }
+    <style>
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-/* Left column */
-.leftcolumn {
-  float: left;
-  width: 75%;
-}
+      /* Left column */
+      .leftcolumn {
+        float: left;
+        width: 75%;
+      }
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
+      /* Right column */
+      .rightcolumn {
+        float: left;
+        width: 25%;
+        padding-left: 20px;
+      }
 
-/* Add a card effect for articles */
-.card {
-   background-color: #F5F5F5;
-   padding: 20px;
-   margin-top: 20px;
-}
+      /* Add a card effect for articles */
+      .card {
+        background-color: #f5f5f5;
+        padding: 20px;
+        margin-top: 20px;
+      }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
 
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
-}
-
-</style>
-</head>
-<body>
-<header>
-    <script src="{{ url_for('static', filename='glide.js') }}"></script>
-    <script src="{{ url_for('static', filename='test.js') }}"></script>
-  <h2>The Blacksmith's Anvil</h2>
-
-</header>
-
-<section>
-  <nav>
-
-<ul>
-  <li><a class="active" href="Home.html">Home</a></li>
-  <li><a href="categories.html">Categories</a></li>
-  <li><a href="giftCard.html">Gift Cards</a></li>
-  <li><a href="career.html">Career</a></li>
-  <li><a href="aboutUs.html">About Us</a></li>
-  <li><a href="cart.html">Cart</a></li>
-  <li><a href="signup.html">Sign Up</a></li>
-  <li><a href="signin.html">Sign In</a></li>
-</ul>
-  </nav>
-
-<article>
-
-      <script>
-
-        window.onscroll = function() {myStickyFunction()};
-
-        var navbar = document.getElementById("navbar");
-        var sticky = navbar.offsetTop;
-
-        function myStickyFunction() {
-          if (window.pageYOffset >= sticky) {
-            navbar.classList.add("sticky")
-          } else {
-            navbar.classList.remove("sticky");
-          }
+      @media screen and (max-width: 800px) {
+        .leftcolumn,
+        .rightcolumn {
+          width: 100%;
+          padding: 0;
         }
-      </script>
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <script src="{{ url_for('static', filename='glide.js') }}"></script>
+      <script src="{{ url_for('static', filename='test.js') }}"></script>
+      <h2>The Blacksmith's Anvil</h2>
+    </header>
 
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-            <!-- use glide to present product of the day or recommended product -->
-  <div class="glide"> <!-- using the glide.js library from https://glidejs.com/ -->
-  <div class="glide__track" data-glide-el="track">
-    <ul class="glide__slides">
-      <li class="glide__slide"><img src="{{ url_for('static', filename='My project.jpg') }}" width="1000" height="600"></li>
-      <li class="glide__slide"><img src="{{ url_for('static', filename='My project (1).jpg') }}" width="1000" height="600"></li>
-      <li class="glide__slide"><img src="{{ url_for('static', filename='My project (2).jpg') }}" width="1000" height="600"></li>
-      <li class="glide__slide"><img src="{{ url_for('static', filename='My project (3).jpg') }}" width="1000" height="600"></li>
-      <li class="glide__slide"><img src="{{ url_for('static', filename='Grey Swirl Hypnotise Zoom Background 16_9.jpg') }}" width="1000" height="600"></li>
-    </ul>
-  <div class="glide__arrows" data-glide-el="controls">
-    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
-  </div>
-  <div class="glide__bullets" data-glide-el="controls[nav]">
-    <button class="glide__bullet" data-glide-dir="=0"></button>
-    <button class="glide__bullet" data-glide-dir="=1"></button>
-    <button class="glide__bullet" data-glide-dir="=2"></button>
-    <button class="glide__bullet" data-glide-dir="=3"></button>
-    <button class="glide__bullet" data-glide-dir="=4"></button>
-  </div>
-  </div>
-</div>
-     </div>
-    <div class="card">
-      <h2>Least selling items</h2>
-      <form class="row g-3">
-    <div class="col-md-6">
-      <!-- product with option for quantity and add to cart button -->
-      <!--linking Dark Orb with an id Dark Orb to be search able in the search engine in the categories page-->
-      <a id="Dark-Orb"><h3>Dark Orb</h3></a>
-      <!--Image-->
-          <img src="{{ url_for('static', filename='dark-orb.jpg') }}" alt="Dark Orb" width="396" height="256">
-      <!--Price-->
-      <div class="price">${{orbprice}}</div>
-      <!--Quantity-->
-      <div class="quantity">
-          <span>quantity : </span>
-          <label>
-              <input type="number" name="quantity" min="1">
-              <input type="submit" name="add2Cart"value="Add to Cart">
-          </label>
-      </div>
-    </div>
+    <section>
+      {% include 'navigation.html' %}
+     
+      <article>
+        <script>
+          window.onscroll = function () {
+            myStickyFunction();
+          };
 
-     <!--linking Galaxy Tea Set with an id Galaxy Tea Set to be search able in the search engine in the categories page-->
-    <div class="col-md-6">
-     <a id="Galaxy-Tea-Set"><h3>Galaxy Tea Set</h3></a>
-      <!--Image-->
-          <img src="{{ url_for('static', filename='galaxy-tea-set.jpg') }}" alt="Galaxy-Tea-Set" width="396" height="256">
-      <!--Price-->
-      <div class="price">$115</div>
-      <!--Quantity-->
-      <div class="quantity">
-          <span>quantity : </span>
-          <label>
-              <input type="number" name="quantity" min="1">
-              <input type="submit" name="add2Cart"value="Add to Cart">
-          </label>
-      </div>
-    </div>
-    </form>
-  </div>
-  </div>
-  <div class="rightcolumn">
-    <div class="card">
-      <h2>Contact Us</h2>
-      <p>BlacksmithsAnvil@example.com</p>
-      <p>But don't! We don't any feedback!</p>
-    </div>
-    <div class="card">
-      <h3>NEW PRODUCTS</h3>
-      <img src="{{ url_for('static', filename='magicLamp.jpg') }}" style="width:50%"><br>
-      <img src="{{ url_for('static', filename='galaxy-tea-set.jpg') }}" style="width:50%"><br>
-      <img src="{{ url_for('static', filename='wooden-controller.jpg') }}" style="width:50%">
-    </div>
-    <div class="card">
-          <!-- Coupons -->
-        <h3>Coupon</h3>
-        <p>Buy 2 get 2</p>
-        <p>50% more. pay us an extra 50% :)</p>
-    </div>
-   <div class="card">
-        <img src="{{ url_for('static', filename="My project (3).jpg") }}" style="width:100%">
-    </div>
-  </div>
-</div>
+          var navbar = document.getElementById("navbar");
+          var sticky = navbar.offsetTop;
 
-    <script src="../../../node_modules/@glidejs/glide/dist/glide.min.js"></script>
-    <script src="{{ url_for('static', filename='test.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-    <script>
-        new Glide('.glide').mount()
-    </script>
+          function myStickyFunction() {
+            if (window.pageYOffset >= sticky) {
+              navbar.classList.add("sticky");
+            } else {
+              navbar.classList.remove("sticky");
+            }
+          }
+        </script>
 
-<form class="row g-3">
-    <div class="col-md-6">
+        <div class="row">
+          <div class="leftcolumn">
+            <div class="card">
+              <!-- use glide to present product of the day or recommended product -->
+              <div class="glide">
+                <!-- using the glide.js library from https://glidejs.com/ -->
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide">
+                      <img
+                        src="{{ url_for('static', filename='My project.jpg') }}"
+                        width="1000"
+                        height="600"
+                      />
+                    </li>
+                    <li class="glide__slide">
+                      <img
+                        src="{{ url_for('static', filename='My project (1).jpg') }}"
+                        width="1000"
+                        height="600"
+                      />
+                    </li>
+                    <li class="glide__slide">
+                      <img
+                        src="{{ url_for('static', filename='My project (2).jpg') }}"
+                        width="1000"
+                        height="600"
+                      />
+                    </li>
+                    <li class="glide__slide">
+                      <img
+                        src="{{ url_for('static', filename='My project (3).jpg') }}"
+                        width="1000"
+                        height="600"
+                      />
+                    </li>
+                    <li class="glide__slide">
+                      <img
+                        src="{{ url_for('static', filename='Grey Swirl Hypnotise Zoom Background 16_9.jpg') }}"
+                        width="1000"
+                        height="600"
+                      />
+                    </li>
+                  </ul>
+                  <div class="glide__arrows" data-glide-el="controls">
+                    <button
+                      class="glide__arrow glide__arrow--left"
+                      data-glide-dir="<"
+                    >
+                      prev
+                    </button>
+                    <button
+                      class="glide__arrow glide__arrow--right"
+                      data-glide-dir=">"
+                    >
+                      next
+                    </button>
+                  </div>
+                  <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                    <button class="glide__bullet" data-glide-dir="=3"></button>
+                    <button class="glide__bullet" data-glide-dir="=4"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <h2>Least selling items</h2>
+              <form class="row g-3">
+                <div class="col-md-6">
+                  <!-- product with option for quantity and add to cart button -->
+                  <!--linking Dark Orb with an id Dark Orb to be search able in the search engine in the categories page-->
+                  <a id="Dark-Orb"><h3>Dark Orb</h3></a>
+                  <!--Image-->
+                  <img
+                    src="{{ url_for('static', filename='dark-orb.jpg') }}"
+                    alt="Dark Orb"
+                    width="396"
+                    height="256"
+                  />
+                  <!--Price-->
+                  <div class="price">${{orbprice}}</div>
+                  <!--Quantity-->
+                  <div class="quantity">
+                    <span>quantity : </span>
+                    <label>
+                      <input type="number" name="quantity" min="1" />
+                      <input
+                        type="submit"
+                        name="add2Cart"
+                        value="Add to Cart"
+                      />
+                    </label>
+                  </div>
+                </div>
 
-    </div>
-</form>
-</article>
-</section>
+                <!--linking Galaxy Tea Set with an id Galaxy Tea Set to be search able in the search engine in the categories page-->
+                <div class="col-md-6">
+                  <a id="Galaxy-Tea-Set"><h3>Galaxy Tea Set</h3></a>
+                  <!--Image-->
+                  <img
+                    src="{{ url_for('static', filename='galaxy-tea-set.jpg') }}"
+                    alt="Galaxy-Tea-Set"
+                    width="396"
+                    height="256"
+                  />
+                  <!--Price-->
+                  <div class="price">$115</div>
+                  <!--Quantity-->
+                  <div class="quantity">
+                    <span>quantity : </span>
+                    <label>
+                      <input type="number" name="quantity" min="1" />
+                      <input
+                        type="submit"
+                        name="add2Cart"
+                        value="Add to Cart"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="rightcolumn">
+            <div class="card">
+              <h2>Contact Us</h2>
+              <p>BlacksmithsAnvil@example.com</p>
+              <p>But don't! We don't any feedback!</p>
+            </div>
+            <div class="card">
+              <h3>NEW PRODUCTS</h3>
+              <img
+                src="{{ url_for('static', filename='magicLamp.jpg') }}"
+                style="width: 50%"
+              /><br />
+              <img
+                src="{{ url_for('static', filename='galaxy-tea-set.jpg') }}"
+                style="width: 50%"
+              /><br />
+              <img
+                src="{{ url_for('static', filename='wooden-controller.jpg') }}"
+                style="width: 50%"
+              />
+            </div>
+            <div class="card">
+              <!-- Coupons -->
+              <h3>Coupon</h3>
+              <p>Buy 2 get 2</p>
+              <p>50% more. pay us an extra 50% :)</p>
+            </div>
+            <div class="card">
+              <img src="{{ url_for('static', filename="My project (3).jpg") }}"
+              style="width:100%">
+            </div>
+          </div>
+        </div>
 
-<footer>
-  <p>Footer</p>
-  <p>Thieves caught will be punished by coding the backend of this site</p>
-</footer>
+        <script src="../../../node_modules/@glidejs/glide/dist/glide.min.js"></script>
+        <script src="{{ url_for('static', filename='test.js') }}"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+        <script>
+          new Glide(".glide").mount();
+        </script>
 
-</body>
+        <form class="row g-3">
+          <div class="col-md-6"></div>
+        </form>
+      </article>
+    </section>
+
+    <footer>
+      <p>Footer</p>
+      <p>Thieves caught will be punished by coding the backend of this site</p>
+    </footer>
+  </body>
 </html>

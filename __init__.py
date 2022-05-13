@@ -1,54 +1,25 @@
-import flask
-from flask import url_for # don't get rid of this import
-import MongoDB as db
-app = flask.Flask(__name__)
+"""
+This file serves as the initial point where all the required functions are carried out.
+In other words, this is where the initalization takes place.
 
-@app.route('/Home.html')
-@app.route('/Home')
-@app.route('/home.html')
-@app.route('/home')
-@app.route('/')
-def home():
-#    price = itemsDB[0]['price']
-    return flask.render_template("home.html")#, orbprice=price)
+"""
+#import the required modules
+import sys
+import os
+from flask_login import LoginManager
+from flask_bcrypt import Bcrypt
+from flask import Flask
+import mysql.connector
 
-
-@app.route('/signup')
-@app.route('/signup.html')
-def signup():
-    return flask.render_template("signup.html")
-
-@app.route('/categories')
-@app.route('/categories.html')
-def categories():
-    return flask.render_template("categories.html")
-
-
-@app.route('/cart')
-@app.route('/cart.html')
-def cart():
-    return flask.render_template("cart.html")
-
-@app.route('/career')
-@app.route('/career.html')
-def career():
-    return flask.render_template("career.html")
-
-@app.route('/aboutUs')
-@app.route('/aboutUs.html')
-def aboutUs():
-    return flask.render_template("aboutUs.html")
-
-@app.route('/giftCard')
-@app.route('/giftCard.html')
-def giftCard():
-    return flask.render_template("giftCard.html")
-
-@app.route('/signin')
-@app.route('/signin.html')
-def signin():
-    return flask.render_template("signin.html")
-
-if __name__ == '__main__':
-    app.debug = True
-    app.run()
+#initialize app
+app = Flask(__name__)
+#set the secret key
+app.config["SECRET_KEY"] = "%$$###@@@@@@@secret"
+#create database connection - this connection will be used in all other areas where connection to db is required
+connection = mysql.connector.connect(host="localhost", port="3306", user="root", database="flask")
+#initialize bcrypt - for password encryption
+bcrypt = Bcrypt(app)
+#initalize login manager - needed for checking auth status
+login_manager = LoginManager(app)
+#import the routes
+from webapp import routes
